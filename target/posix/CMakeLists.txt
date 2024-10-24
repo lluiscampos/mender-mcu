@@ -22,6 +22,7 @@ cmake_minimum_required(VERSION 3.16.3)
 project(mender-mcu-client LANGUAGES C)
 
 # Include helper to define MENDER_MCU_ variables
+include(../../cmake/CMake_posix_defaults.txt)
 include(../../cmake/mender_mcu_sources.txt)
 
 # Compiler options
