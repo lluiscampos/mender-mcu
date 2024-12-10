@@ -1,0 +1,6 @@
+west-commands:
+  - file: target/zephyr/west_commands/mender.py
+    commands:
+      - name: mender
+        class: MenderCommands
+        help: "execute Mender commands: artifact, upload"
