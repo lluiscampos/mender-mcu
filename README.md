@@ -105,6 +105,20 @@ After writing the code, you need to register the Update Module into the Mender M
 update module function in [`mender-client.h`](include/mender-client.h).
 
 
+### West commands for Mender
+
+Mender incorporates convenience commands for west:
+* `west mender artifact`: Package your last Zephyr build as a Mender Artifact.
+* `west mender upload`: Upload the Mender Artifact to the Mender Server.
+
+To use these, add to your west manifest:
+```
+  projects:
+    - name: mender-mcu
+      ...
+      west-commands: target/zephyr/west-commands.yml
+```
+
 ## Experimental: testing the Mender MCU Client with POSIX
 
 ### Dependencies
